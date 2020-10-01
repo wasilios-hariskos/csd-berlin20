@@ -20,6 +20,8 @@ https://moodle.hwr-berlin.de/fb2-stundenplan/stundenplan.php
 + 23. Oktober (9:00 - 11:15 & 11:30 - 13:00)
 + 30. Oktober (9:45 - 11:15 & 11:30 - 13:00)
 
+Die [Webex Meetings](https://uni-erfurt.webex.com/meet/wasilios.hariskos) starten 5 Minuten vor Seminarbeginn.
+
 # Modulaufbau
 
 + 22 Std. seminarischer Unterricht

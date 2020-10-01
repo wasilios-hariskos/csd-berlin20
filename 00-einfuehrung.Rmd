@@ -26,15 +26,19 @@ https://moodle.hwr-berlin.de/fb2-stundenplan/stundenplan.php
 + 26 Std. Selbststudium
 + 12 Std. Betriebliche Erfahrung
 
-# Studienleistung im Rahmen der aktiven Teilnahme
+# Studienleistung
 
-Melden Sie sich bei www.datacamp.com an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse als Hausaufgaben:
+Die Studienleistung zur aktiven Teilnahme sind Hausaufgaben im Umfang von 10 Stunden, in denen Sie das elernte Wissen aus dem Seminar anwenden. Dazu melden Sie sich bitte bei www.datacamp.com an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse:
 
 + [Introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r)
 + [Introduction to the Tidyverse](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
 + [Case Study: Exploratory Data Analysis in R](https://learn.datacamp.com/courses/case-study-exploratory-data-analysis-in-r)
 
 Jeder Kurs dauert 4 Stunden, zusammen also 12 Stunden. Da die Studienleistung Hausaufgaben jedoch nur max. 10 Stunden umfassen darf, werden wir einen Teil der Onlinekurse im Umfang von 2 Stunden zusammen im Seminar machen: In der ersten Sitzung das erste Kapitel des Einführungskurses damit sich alle mit der Onlineplattform vertraut machen können sowie in der letzten Sitzung das zweite Kapitel der Fallstudie, in welchem die statistische Methode der Regressionsanalyse angewendet wird.
+
+# Links
++ [Kursseite](https://tinyurl.com/y4mc5vp5)
++ [Mein erstes Skript](https://github.com/wasilios-hariskos/csd-berlin20/blob/master/01-mein-erstes-skript.R)
 
 
 # Anwesenheit

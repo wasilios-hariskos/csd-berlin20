@@ -1,7 +1,7 @@
 ---
 title: "Computergestützte Statistische Datenanalyse"
 author: "Dr. Wasilios Hariskos"
-date: "2. Oktober 2020"
+date: "02. Oktober 2020"
 output:
   html_document: default
 ---
@@ -24,11 +24,11 @@ https://moodle.hwr-berlin.de/fb2-stundenplan/stundenplan.php
 
 + 22 Std. seminarischer Unterricht
 + 26 Std. Selbststudium
-+ 12 Std. Betriebliche Erfahrung
++ 12 Std. betriebliche Erfahrung
 
 # Studienleistung
 
-Die Studienleistung zur aktiven Teilnahme sind Hausaufgaben im Umfang von 10 Stunden, in denen Sie das elernte Wissen aus dem Seminar anwenden. Dazu melden Sie sich bitte bei www.datacamp.com an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse:
+Die Studienleistung zur aktiven Teilnahme sind Hausaufgaben im Umfang von 10 Stunden, in denen Sie das elernte Wissen aus dem Seminar anwenden. Dazu melden Sie sich bitte bei [Datacamp](www.datacamp.com) an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse:
 
 + [Introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r)
 + [Introduction to the Tidyverse](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
@@ -36,48 +36,64 @@ Die Studienleistung zur aktiven Teilnahme sind Hausaufgaben im Umfang von 10 Stu
 
 Jeder Kurs dauert 4 Stunden, zusammen also 12 Stunden. Da die Studienleistung Hausaufgaben jedoch nur max. 10 Stunden umfassen darf, werden wir einen Teil der Onlinekurse im Umfang von 2 Stunden zusammen im Seminar machen: In der ersten Sitzung das erste Kapitel des Einführungskurses damit sich alle mit der Onlineplattform vertraut machen können sowie in der letzten Sitzung das zweite Kapitel der Fallstudie, in welchem die statistische Methode der Regressionsanalyse angewendet wird.
 
+Der erste Kurs sowie die das erste Kapitel der nächsten beiden Kurse können kostenlos bearbeitet werden. Damit Sie alle Kurse auf Datacamp frei nutzen können, habe ich einen kostenfreien Zugang für die Lehre beantragt. Sobald dieser freigeben wird, schicke ich Ihnen eine Einladung zu unserer Unigruppe per E-Mail. So können Sie alle (nicht nur die drei Kurse oben) kostenfrei für 6 Monate nutzen.
+
+Gut zu wissen: Wenn Sie einen Kurs auf Datacamp abschließen bekommen Sie als Bonus ein Zertifikat, das Sie ihrer Bewerbung bei einem Unternehmen anhängen oder auf LinkedIn hochladen können. 
+
+Frage: Haben Sie Interesse an einer Telegram Gruppe zum gegenseitigen Support bei der Bearbeitung der Hausaufgaben oder bei Fragen zu den Inhalten des Seminars?
+
 # Links
 + [Kursseite](https://tinyurl.com/y4mc5vp5)
-+ [Mein erstes Skript](https://github.com/wasilios-hariskos/csd-berlin20/blob/master/01-mein-erstes-skript.R)
++ [Github Verzeichnis (Repository)](https://github.com/wasilios-hariskos/csd-berlin20)
++ [Programmiersprache R und Benutzeroberfläche R Studio installieren](https://rstudio.com/products/rstudio/download/#download)
++ [Git für die Version Control (zur Zusammenarbeit an einem Projekt) installieren](https://git-scm.com/downloads)
++ [Optional: Weitere Infos zu R, RStudio und Git](https://www.geo.uzh.ch/microsite/reproducible_research/post/rr-rstudio-git/)
++ [Mein erstes Skript](https://raw.githubusercontent.com/wasilios-hariskos/csd-berlin20/master/01-mein-erstes-skript.R)
++ Folien: Programmieren mit R
++ Folien: Umgang mit Daten
++ Folien: Visualisierung von Daten
++ Folien: Explorative Datenanalyse
++ Folien: Regressionsanalyse
 
+Folien werden vor dem Seminar zur Verfügung gestellt. Konzentrieren Sie sich auf vor allem auf die Bearbeitung der Hausaufgaben auf Datacamp und bereiten Sie bitte nach dem Seminar nach Bedarf die Inhalte der Folien nach.
 
 # Anwesenheit
 
 Eine 0 bedeutet nicht anwesend und eine 1 bedeutet anwesend.
 
-|email | 02-10 | 09-10 | 16-10 | 23-10 | 30-10 |
+|name | 02-10 | 09-10 | 16-10 | 23-10 | 30-10 |
 |------|--|--|--|--|--|
-|s_toepfner19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_bredereck19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_schade19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_baer19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_wagenknecht19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_foerster19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_hahn19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_soyk19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_lipinski19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_wolfj19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_vollstedtc19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_rudolphm19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_hauptmann19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_schumacher19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_groegerj19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_luda19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_buchholtzj19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_hadeball19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_mensing19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_loeffler19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_hartmanne19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_huwe19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_fuehrlich19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_bauschlicher19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_kuehnen18@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_eremenkov19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_nissen19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_metze19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_winklerp19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_kowal19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_miller19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_schallenberg19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_miehe19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
-|s_reich19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|toepfner | 0 | 0 | 0 | 0 | 0 |
+|bredereck | 0 | 0 | 0 | 0 | 0 |
+|schade | 0 | 0 | 0 | 0 | 0 |
+|baer | 0 | 0 | 0 | 0 | 0 |
+|wagenknecht | 0 | 0 | 0 | 0 | 0 |
+|foerster | 0 | 0 | 0 | 0 | 0 |
+|hahn | 0 | 0 | 0 | 0 | 0 |
+|soyk | 0 | 0 | 0 | 0 | 0 |
+|lipinski | 0 | 0 | 0 | 0 | 0 |
+|wolfj | 0 | 0 | 0 | 0 | 0 |
+|vollstedtc | 0 | 0 | 0 | 0 | 0 |
+|rudolphm | 0 | 0 | 0 | 0 | 0 |
+|hauptmann | 0 | 0 | 0 | 0 | 0 |
+|schumacher | 0 | 0 | 0 | 0 | 0 |
+|groegerj | 0 | 0 | 0 | 0 | 0 |
+|luda | 0 | 0 | 0 | 0 | 0 |
+|buchholtzj | 0 | 0 | 0 | 0 | 0 |
+|hadeball | 0 | 0 | 0 | 0 | 0 |
+|mensing | 0 | 0 | 0 | 0 | 0 |
+|loeffler | 0 | 0 | 0 | 0 | 0 |
+|hartmanne | 0 | 0 | 0 | 0 | 0 |
+|huwe | 0 | 0 | 0 | 0 | 0 |
+|fuehrlich | 0 | 0 | 0 | 0 | 0 |
+|bauschlicher | 0 | 0 | 0 | 0 | 0 |
+|kuehnen | 0 | 0 | 0 | 0 | 0 |
+|eremenkov | 0 | 0 | 0 | 0 | 0 |
+|nissen | 0 | 0 | 0 | 0 | 0 |
+|metze | 0 | 0 | 0 | 0 | 0 |
+|winklerp | 0 | 0 | 0 | 0 | 0 |
+|kowal | 0 | 0 | 0 | 0 | 0 |
+|miller | 0 | 0 | 0 | 0 | 0 |
+|schallenberg | 0 | 0 | 0 | 0 | 0 |
+|miehe | 0 | 0 | 0 | 0 | 0 |
+|reich | 0 | 0 | 0 | 0 | 0 |

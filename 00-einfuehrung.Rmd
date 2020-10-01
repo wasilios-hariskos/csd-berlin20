@@ -1,0 +1,79 @@
+---
+title: "Computergestützte Statistische Datenanalyse"
+author: "Dr. Wasilios Hariskos"
+date: "2. Oktober 2020"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Veranstaltungen
+
+https://moodle.hwr-berlin.de/fb2-stundenplan/stundenplan.php
+
++ 02. Oktober (9:45 - 11:15 & 11:30 - 13:00)
++ 09. Oktober (9:45 - 11:15 & 11:30 - 13:00)
++ 16. Oktober (9:00 - 11:15 & 11:30 - 13:00)
++ 23. Oktober (9:00 - 11:15 & 11:30 - 13:00)
++ 30. Oktober (9:45 - 11:15 & 11:30 - 13:00)
+
+# Modulaufbau
+
++ 22 Std. seminarischer Unterricht
++ 26 Std. Selbststudium
++ 12 Std. Betriebliche Erfahrung
+
+# Studienleistung im Rahmen der aktiven Teilnahme
+
+Melden Sie sich bei www.datacamp.com an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse als Hausaufgaben:
+
++ [Introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r)
++ [Introduction to the Tidyverse](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
++ [Case Study: Exploratory Data Analysis in R](https://learn.datacamp.com/courses/case-study-exploratory-data-analysis-in-r)
+
+Jeder Kurs dauert 4 Stunden, zusammen also 12 Stunden. Da die Studienleistung Hausaufgaben jedoch nur max. 10 Stunden umfassen darf, werden wir einen Teil der Onlinekurse im Umfang von 2 Stunden zusammen im Seminar machen: In der ersten Sitzung das erste Kapitel des Einführungskurses damit sich alle mit der Onlineplattform vertraut machen können sowie in der letzten Sitzung das zweite Kapitel der Fallstudie, in welchem die statistische Methode der Regressionsanalyse angewendet wird.
+
+
+# Anwesenheit
+
+Eine 0 bedeutet nicht anwesend und eine 1 bedeutet anwesend.
+
+|email | 02-10 | 09-10 | 16-10 | 23-10 | 30-10 |
+|------|--|--|--|--|--|
+|s_toepfner19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_bredereck19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_schade19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_baer19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_wagenknecht19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_foerster19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_hahn19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_soyk19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_lipinski19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_wolfj19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_vollstedtc19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_rudolphm19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_hauptmann19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_schumacher19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_groegerj19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_luda19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_buchholtzj19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_hadeball19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_mensing19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_loeffler19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_hartmanne19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_huwe19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_fuehrlich19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_bauschlicher19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_kuehnen18@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_eremenkov19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_nissen19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_metze19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_winklerp19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_kowal19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_miller19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_schallenberg19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_miehe19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |
+|s_reich19@stud.hwr-berlin.de | 0 | 0 | 0 | 0 | 0 |

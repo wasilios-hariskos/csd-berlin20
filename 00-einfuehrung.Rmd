@@ -30,7 +30,7 @@ Die [Webex Meetings](https://uni-erfurt.webex.com/meet/wasilios.hariskos) starte
 
 # Studienleistung
 
-Die Studienleistung zur aktiven Teilnahme sind Hausaufgaben im Umfang von 10 Stunden, in denen Sie das elernte Wissen aus dem Seminar anwenden. Dazu melden Sie sich bitte bei [Datacamp](www.datacamp.com) an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse:
+Die Studienleistung zur aktiven Teilnahme sind Hausaufgaben im Umfang von 10 Stunden, in denen Sie das elernte Wissen aus dem Seminar anwenden. Dazu melden Sie sich bitte bei [Datacamp](https://www.datacamp.com) an und absolvieren Sie bis zum 06.11.2020 alle der drei gelisteten interaktiven Onlinekurse:
 
 + [Introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r)
 + [Introduction to the Tidyverse](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
@@ -47,7 +47,7 @@ Frage: Haben Sie Interesse an einer Telegram Gruppe zum gegenseitigen Support be
 # Links
 + [Kursseite](https://tinyurl.com/y4mc5vp5)
 + [Github Verzeichnis (Repository)](https://github.com/wasilios-hariskos/csd-berlin20)
-+ [Programmiersprache R und Benutzeroberfläche R Studio installieren](https://rstudio.com/products/rstudio/download/#download)
++ [Programmiersprache R und Benutzeroberfläche R Studio installieren](https://rstudio.com/products/rstudio/download)
 + [Git für die Version Control (zur Zusammenarbeit an einem Projekt) installieren](https://git-scm.com/downloads)
 + [Optional: Weitere Infos zu R, RStudio und Git](https://www.geo.uzh.ch/microsite/reproducible_research/post/rr-rstudio-git/)
 + [Mein erstes Skript](https://raw.githubusercontent.com/wasilios-hariskos/csd-berlin20/master/01-mein-erstes-skript.R)
@@ -56,7 +56,6 @@ Frage: Haben Sie Interesse an einer Telegram Gruppe zum gegenseitigen Support be
 + Folien: Visualisierung von Daten
 + Folien: Explorative Datenanalyse
 + Folien: Regressionsanalyse
-+ Extra
 
 Folien werden vor dem Seminar zur Verfügung gestellt. Konzentrieren Sie sich auf vor allem auf die Bearbeitung der Hausaufgaben auf Datacamp und bereiten Sie bitte nach dem Seminar nach Bedarf die Inhalte der Folien nach.
 

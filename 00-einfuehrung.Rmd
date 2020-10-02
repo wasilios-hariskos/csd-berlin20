@@ -93,7 +93,7 @@ Eine 0 bedeutet nicht anwesend und eine 1 bedeutet anwesend.
 |kuehnen | 0 | 0 | 0 | 0 | 0 |
 |eremenkov | 0 | 0 | 0 | 0 | 0 |
 |nissen | 0 | 0 | 0 | 0 | 0 |
-|metze | 0 | 0 | 0 | 0 | 0 |
+|metze | 1 | 0 | 0 | 0 | 0 |
 |winklerp | 0 | 0 | 0 | 0 | 0 |
 |kowal | 0 | 0 | 0 | 0 | 0 |
 |miller | 0 | 0 | 0 | 0 | 0 |

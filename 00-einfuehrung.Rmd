@@ -56,6 +56,7 @@ Frage: Haben Sie Interesse an einer Telegram Gruppe zum gegenseitigen Support be
 + Folien: Visualisierung von Daten
 + Folien: Explorative Datenanalyse
 + Folien: Regressionsanalyse
++ Extra
 
 Folien werden vor dem Seminar zur Verfügung gestellt. Konzentrieren Sie sich auf vor allem auf die Bearbeitung der Hausaufgaben auf Datacamp und bereiten Sie bitte nach dem Seminar nach Bedarf die Inhalte der Folien nach.
 

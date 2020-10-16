@@ -39,7 +39,7 @@ a / 0
 ### Potenzieren
 a^b     # a hoch b
 
-### Modulo: Der Rest bei einer Division
+### Modulo: Der Rest bei einer ganzzahligen Division
 5 %% 2 
 
 b %% a 
@@ -80,22 +80,24 @@ v2
 
 c(2, 2:5)
 
-v3 <- -2:2
+v3 <- -1:2
 v3
 
 ## Benennen
 
 ein_vektor <- c("Martin Schulze", "Gastwirt")
+ein_vektor
 
 names(ein_vektor) <- c("Name", "Beruf")
-
 ein_vektor
 
 ## Addition
-
+v1
+v2
 v1 + v2
 
-c(1, 2, 3, 4) + c(1, 2)
+c(1, 2, 3, 4, 5, 6) + c(1, 2)
+c(1, 2, 3, 4, 5, 6) + c(1, 2, 1, 2, 1, 2)
 
 v3 <- c(1, 2, 3) + c(4, 5, 6)
 v3
@@ -112,6 +114,10 @@ sum(c(1, 2, 5))
 sum(1, 2, 5)
 
 help(sum)
+?c
+
+c(1, 7:9)
+c(1:5, 10.5, "next")
 
 sum(v4)
 
@@ -127,7 +133,7 @@ sum(v3, v4)
 ## Auswählen / Subsetting
 
 v2
-v2[1]
+v2[4]
 
 v1
 v1[1] <- "a"
@@ -138,24 +144,25 @@ v1
 
 class(v1)
 
+is.numeric(v1)
+is.character(v1)
+
 class(as.numeric(v1))
+
 
 v1
 v1 <- as.numeric(v1)
 v1
 
-v2[2]
-v1[2]
-
 ein_vektor
 index <- c("Beruf", "Name")
 index
-ein_vektor[index]
+ein_vektor <- ein_vektor[index]
 ein_vektor
 
 ein_vektor[c(2, 1)]
 
-v1
+v1 
 
 v1[c(1, 5)]
 
@@ -196,23 +203,34 @@ matrix(data = 1:9,
        nrow = 3, 
        byrow = TRUE)
 
-matrix(1:9, 3, 3, TRUE)
+matrix(1:9, 3, 3 ,TRUE)
 
 matrix(nrow = 3,
        byrow = TRUE,
        data = 1:9)
 
-help(c)
-
 meine_matrix <- matrix(data = 1:9,
                     nrow = 3,
                     ncol = 3,
                     byrow = FALSE)
+meine_matrix
 
 ?sum
+sum(data = c(23, 20, 21, NA), 
+    na.rm = FALSE)
 
 ## Benennen
 help(rownames)
+
+m2 <- cbind(1, 1:4)
+m2
+colnames(m2, do.NULL = FALSE)
+colnames(m2) <- c("x","Y")
+m2
+rownames(m2) <- rownames(m2, do.NULL = FALSE, prefix = "Obs.")
+m2
+
+meine_matrix
 rownames(meine_matrix) <- c("row 1", "row 2", "row 3")
 meine_matrix
 colnames(meine_matrix) <- c("col 1", "col 2", "col 3")
@@ -228,9 +246,9 @@ matrix(data = 1:9,
                        c("col 1", "col 2", "col 3"))
 )
 
-??matrix # exkurs
-
 ## Summieren von Zeilen
+
+meine_matrix
 
 rowSums(meine_matrix)
 
@@ -238,16 +256,15 @@ rowSums(meine_matrix)
 
 colSums(meine_matrix)
 
+## Alle Elemente summieren
+sum(meine_matrix)
+
 ## Zeilen oder Spalten hinzufügen
 
 v5 <- c(3, 5, 7)
 
 meine_matrix
 v5
-rbind(meine_matrix, meine_matrix, v5)
-
-#rbind(meine_matrix[1,], v5, meine_matrix[2:3,])
-
 rbind(meine_matrix, meine_matrix, v5)
 
 cbind(meine_matrix, c(1, 1, 1))
@@ -268,8 +285,11 @@ meine_matrix[1, 1:3]
 
 dim(matrix(1:8, 4))
 
-x <- 1:12 ; dim(x) <- c(3, 4)
+x <- 1:12
+class(x)
+dim(x) <- c(3, 4)
 x
+class(x)
 
 ## Rechenoperationen
 
@@ -285,7 +305,37 @@ meine_matrix / meine_matrix
 
 meine_matrix %*% meine_matrix
 
-2 * meine_matrix
+meine_matrix %*% matrix(11:16, nrow = 3)
+
+3 * meine_matrix
+
+## Exkurs: Erklärung der Matrizenmultiplikation
+
+### Matrizenmultiplikation (A %*% B = C)
+
+x = 2 # Spaltenanzahl der 1. Matrix = Zeilenanzahl der 2. Matrix
+
+A = matrix(data = 1:4, ncol = x)
+A
+dim(A)
+
+B = matrix(data = 1:10, nrow = x)
+B
+dim(B)
+
+C <- A %*% B 
+C
+dim(C) # Zeilenanzahl der 1. Matrix = Spaltenanzahl der 2. Matrix
+
+### Auswahl eines Elements
+zeile = 2
+spalte = 1
+C[zeile, spalte]
+
+### Berechnung: Zeilenvektor * Spaltenvektor und aufsummieren (inneres Skalarprodukt)
+A[zeile,] * B[,spalte]
+sum(A[zeile,] * B[,spalte])
+
 
 # Faktoren
 
@@ -294,13 +344,16 @@ meine_matrix %*% meine_matrix
 
 geschlecht <- c("Mann", "Frau", "Frau", "Mann")
 class(geschlecht)
+geschlecht
 
-factor(geschlecht)
+geschlecht_factor <- factor(geschlecht)
+geschlecht_factor
 
 ## Nominalskalierte kategoriale Variable (unordered factor)
 
 tiere <- c("Hund", "Katze", "Hund")
-factor_tiere <- factor(tiere)
+tiere
+factor_tiere <- factor( x = tiere)
 factor_tiere
 
 ## Vergleich von Elementen eines "unordered factor"
@@ -312,9 +365,9 @@ factor_tiere[1] == factor_tiere[3] # Vergleich macht Sinn
 ## Ordinalskalierte kategoriale Variable (ordered factor)
 
 temperatur <- c("hoch", "niedrig", "niedrig", "mittel")
-factor_temperatur <- factor(temperatur,
-                                    ordered = TRUE,
-                                    levels = c("niedrig", "mittel", "hoch")
+factor_temperatur <- factor(x = temperatur,
+                            ordered = TRUE,
+                            levels = c("niedrig", "mittel", "hoch")
 )
 factor_temperatur
 
@@ -339,12 +392,6 @@ factor_gender
 
 class(factor_gender)
 
-## Kurzdarstellung
-
-summary(factor_temperatur)
-summary(tiere) # aufpassen, hier wir nicht der faktorisierte vektor genutzt
-summary(factor_tiere) # besser
-
 # Datensätze (data frames)
 
 ## Beispiel
@@ -357,12 +404,14 @@ help(mtcars)
 
 ## Überblick gewinnen
 
-head(mtcars)
+help(mtcars)
 
 help(head)
 
+letters
+class(letters)
 head(letters)
-head(letters, n = -24L)
+head(letters, n = Inf)
 
 tail(mtcars)
 
@@ -372,13 +421,16 @@ help(str)
 
 ## Erstellen
 
-help("data.frame") # see example
+help(data.frame) # see example
 
 L3 <- LETTERS[1:3]
 L3
 
-fac <- sample(L3, 10, replace = TRUE)
+fac <- sample(x = L3, 
+              size = 10, 
+              replace = TRUE)
 fac
+class(fac)
 
 help(sample)
 
@@ -395,35 +447,37 @@ is.data.frame(d)
 
 ## Auswählen
 d
-d[1, 2]
+d[1, 3]
 d[1:3, 2:3]
 d[1, ]
 d[1:5, "initial"]
 d$initial
+d[,3]
 d$one
 
 ## Subset: Untermengen bilden
 
 help(subset) # see examples
 
-str(airquality)
 help(airquality)
+str(airquality)
+
 
 head(airquality)
 tail(airquality)
 
-df1 <- subset(airquality, 
-              Temp > 80, 
+df1 <- subset(x = airquality, 
+              subset = Temp > 80, 
               select = c(Ozone, Temp))
 str(df1)
 
-df2 <- subset(airquality, 
-              Day == 1, 
+df2 <- subset(x = airquality, 
+              subset = Day == 1, 
               select = c(-Temp, -Solar.R))
 
 str(df2)
 
-df3 <- subset(airquality, 
+df3 <- subset(x = airquality, 
               select = Ozone:Wind)
 
 str(df3)
@@ -438,6 +492,7 @@ v <- c(100, 10, 1000, 50)
 
 order(v) # was macht order
 
+v
 v[order(v)]  # Aufgabe: In aufsteigender reihenfolge anordnen
 v[order(-v)]  # Aufgabe: In absteigender reihenfolge anordnen
 
@@ -470,9 +525,11 @@ m2 <- matrix(data = 15:1,
              ncol = 5,
              byrow = TRUE)
 m2
+class(m2)
 
 df1 <- data.frame(m2)
 df1
+class(df1)
 
 df2 <- head(mtcars)
 df2
@@ -481,13 +538,13 @@ df3 <- tail(airquality)
 df3
 
 meine_liste <- list(vector1, # liste erstellen
-                vector2,
-                vector3,
-                m1,
-                m2,
-                df1,
-                df2,
-                df3)
+                    vector2,
+                    vector3,
+                    m1,
+                    m2,
+                    df1,
+                    df2,
+                    df3)
 
 meine_liste
 
@@ -496,13 +553,13 @@ meine_liste
 ### Existierende
 
 names(meine_liste) <- c("Numeric",
-                    "Character",
-                    "Logical",
-                    "Matrix1",
-                    "Matrix2",
-                    "Datensatz1",
-                    "Datensatz2",
-                    "Datensatz3")
+                        "Character",
+                        "Logical",
+                        "Matrix1",
+                        "Matrix2",
+                        "Datensatz1",
+                        "Datensatz2",
+                        "Datensatz3")
 meine_liste
 
 meine_liste$Datensatz2
@@ -510,13 +567,13 @@ meine_liste$Datensatz2
 ### Neue Liste
 
 meine_liste2 <- list(Numeric = vector1, # liste erstellen
-                 Character = vector2,
-                 Logical = vector3,
-                 Matrix1 = m1,
-                 Matrix2 = m2,
-                 Datensatz1 = df1,
-                 Datensatz2 = df2,
-                 Datensatz3 = df3)
+                     Character = vector2,
+                     Logical = vector3,
+                     Matrix1 = m1,
+                     Matrix2 = m2,
+                     Datensatz1 = df1,
+                     Datensatz2 = df2,
+                     Datensatz3 = df3)
 
 meine_liste2
 
@@ -527,18 +584,21 @@ meine_liste2$Datensatz3$Temp
 
 meine_liste2[[8]]
 meine_liste2[[8]][[4]]
+class(meine_liste2[[8]][[4]])
 meine_liste2[[8]][4]
+class(meine_liste2[[8]][4])
 
 meine_liste2[["Datensatz3"]]
 meine_liste2[["Datensatz3"]]["Temp"]
 
 meine_liste2$Datensatz3
-meine_liste2$Datensatz3[4]
-meine_liste2$Datensatz3[[4]]
+meine_liste2$Datensatz3[4] # data.frame als output
+meine_liste2$Datensatz3[[4]] # vector als output
 
 ## Element hinzufügen
 
 text <- "Prima, wir sind fast fertig mit der Einführung in R."
+text
 meine_liste3 <- c(meine_liste2, text)
 meine_liste3
 
@@ -552,7 +612,3 @@ head(meine_liste4)
 tail(meine_liste4)
 
 str(meine_liste4)
-
-sum(abs(c(-10, 5, -3)))^2 * 10
-
-help(abs)

@@ -59,4 +59,49 @@ Frage: Haben Sie Interesse an einer Telegram Gruppe zum gegenseitigen Support be
 + Folien: Explorative Datenanalyse
 + Folien: Regressionsanalyse
 
+<<<<<<< HEAD
 Folien werden vor dem Seminar zur Verfügung gestellt. Konzentrieren Sie sich auf vor allem auf die Bearbeitung der Hausaufgaben auf Datacamp und bereiten Sie bitte nach dem Seminar nach Bedarf die Inhalte der Folien nach.
+=======
+Folien werden vor dem Seminar zur Verfügung gestellt. Konzentrieren Sie sich auf vor allem auf die Bearbeitung der Hausaufgaben auf Datacamp und bereiten Sie bitte nach dem Seminar nach Bedarf die Inhalte der Folien nach.
+
+# Anwesenheit
+
+Eine 0 bedeutet nicht anwesend und eine 1 bedeutet anwesend.
+
+|name | 02-10 | 09-10 | 16-10 | 23-10 | 30-10 |
+|------|--|--|--|--|--|
+|toepfner | 0 | 0 | 0 | 0 | 0 |
+|bredereck | 0 | 0 | 0 | 0 | 0 |
+|schade | 0 | 0 | 0 | 0 | 0 |
+|baer | 0 | 0 | 0 | 0 | 0 |
+|wagenknecht | 0 | 0 | 0 | 0 | 0 |
+|foerster | 0 | 0 | 0 | 0 | 0 |
+|hahn | 0 | 0 | 0 | 0 | 0 |
+|soyk | 0 | 0 | 0 | 0 | 0 |
+|lipinski | 0 | 0 | 0 | 0 | 0 |
+|wolfj | 0 | 0 | 0 | 0 | 0 |
+|vollstedtc | 0 | 0 | 0 | 0 | 0 |
+|rudolphm | 0 | 0 | 0 | 0 | 0 |
+|hauptmann | 0 | 0 | 0 | 0 | 0 |
+|schumacher | 0 | 0 | 0 | 0 | 0 |
+|groegerj | 0 | 0 | 0 | 0 | 0 |
+|luda | 0 | 0 | 0 | 0 | 0 |
+|buchholtzj | 0 | 0 | 0 | 0 | 0 |
+|hadeball | 0 | 0 | 0 | 0 | 0 |
+|mensing | 0 | 0 | 0 | 0 | 0 |
+|loeffler | 0 | 0 | 0 | 0 | 0 |
+|hartmanne | 0 | 0 | 0 | 0 | 0 |
+|huwe | 0 | 0 | 0 | 0 | 0 |
+|fuehrlich | 0 | 0 | 0 | 0 | 0 |
+|bauschlicher | 0 | 0 | 0 | 0 | 0 |
+|kuehnen | 0 | 0 | 0 | 0 | 0 |
+|eremenkov | 0 | 0 | 0 | 0 | 0 |
+|nissen | 0 | 0 | 0 | 0 | 0 |
+|metze | 1 | 0 | 0 | 0 | 0 |
+|winklerp | 0 | 0 | 0 | 0 | 0 |
+|kowal | 0 | 0 | 0 | 0 | 0 |
+|miller | 0 | 0 | 0 | 0 | 0 |
+|schallenberg | 0 | 0 | 0 | 0 | 0 |
+|miehe | 0 | 0 | 0 | 0 | 0 |
+|reich | 0 | 0 | 0 | 0 | 0 |
+>>>>>>> cf6d5accf3cea78f75bd831bc469c9de1b6efea4

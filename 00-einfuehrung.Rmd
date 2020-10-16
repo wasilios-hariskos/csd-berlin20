@@ -53,8 +53,8 @@ Frage: Haben Sie Interesse an einer Telegram Gruppe zum gegenseitigen Support be
 + [Git für die Version Control (zur Zusammenarbeit an einem Projekt) installieren](https://git-scm.com/downloads)
 + [Optional: Weitere Infos zu R, RStudio und Git](https://www.geo.uzh.ch/microsite/reproducible_research/post/rr-rstudio-git/)
 + [Mein erstes Skript](https://raw.githubusercontent.com/wasilios-hariskos/csd-berlin20/master/01-mein-erstes-skript.R)
-+ [Folien: Programmieren mit R](http://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/01_programmingR_base.html)
-+ Folien: Umgang mit Daten
++ [Folien: Programmieren mit R](https://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/01_programmingR_base.html)
++ [Folien: Umgang mit Daten](https://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/02_dataTransformation_dplyr.html)
 + Folien: Visualisierung von Daten
 + Folien: Explorative Datenanalyse
 + Folien: Regressionsanalyse

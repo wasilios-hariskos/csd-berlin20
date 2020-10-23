@@ -129,7 +129,7 @@ gdp_1997 %>%
 ```{r echo=TRUE}
 gdp_1997 %>%
   summarize(meanLifeExp = mean(lifeExp),
-            totalPop = sum(pop))
+            totalPop = sum(as.numeric(pop)))
 ```
 
 ## Add more statistics

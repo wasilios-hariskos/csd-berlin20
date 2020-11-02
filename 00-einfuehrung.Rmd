@@ -55,6 +55,13 @@ Gut zu wissen: Wenn Sie einen Kurs auf Datacamp abschließen bekommen Sie als Bo
 + [Folien: Umgang mit Daten](https://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/02_dataTransformation_dplyr.html)
 + [Folien: Visualisierung von Daten](https://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/03_dataVisualization_ggplot2.html)
 + [Folien: Explorative Datenanalyse](https://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/04_exploratoryDataAnalysis.html)
-+ Folien: Regressionsanalyse.
++ Folien: Regressionsanalyse(https://htmlpreview.github.io/?https://github.com/wasilios-hariskos/csd-berlin20/blob/master/05_linear_regression.html)
++ Extras: (BBWorld)[https://github.com/wasilios-hariskos/csd-berlin20/blob/master/BBworld.R], (Surpise)[https://github.com/wasilios-hariskos/csd-berlin20/blob/master/surprise.pdf]
 
 Folien werden vor dem Seminar zur Verfügung gestellt. Konzentrieren Sie sich auf vor allem auf die Bearbeitung der Hausaufgaben auf Datacamp und bereiten Sie bitte nach dem Seminar nach Bedarf die Inhalte der Folien nach.
+
+# Literatur
+
++ [R for Data Science](r4ds.had.co.nz)
++ [Introduction to Econometrics with R](https://www.econometrics-with-r.org/)
++ [Discovering Statistics Using R](https://www.amazon.de/Discovering-Statistics-Using-Andy-Field/dp/1446200469)

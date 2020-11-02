@@ -1,0 +1,194 @@
+---
+title: "Regressionsanalyse"
+author: "Dr. Wasilios Hariskos"
+date: "27. Oktober 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Datenmanipulation
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(broom)
+# install.packages("countrycode")
+library(countrycode)
+```
+
+
+## Daten einlesen
+
+```{r}
+# Read dataset
+votes <- 
+  readRDS(file = "votes.rds") %>% 
+  print()
+```
+
+## Datenaufbereitung
+
+```{r warning=FALSE}
+# Filter for "yes", "abstain", or "no" votes
+# Make dataset more readable
+votes <-
+  votes %>%
+  filter(vote <= 3) %>%
+  mutate(vote2 = vote,
+         year = 1945 + session,
+         country = countrycode(sourcevar = ccode,
+                               origin = "cown",
+                               destination = "country.name"),
+         vote = factor(x = vote2,
+                       labels = c("Yes", "Abstain", "No"))) %>% 
+print()
+```
+
+Kodierungsschema für die Variable `vote`:
+
+  + 1 = Yes
+  + 2 = Abstain
+  + 3 = No
+  + 8 = Not present
+  + 9 = Not a member
+  
+`vote2` ist eine Sicherungskopie um zu checken, ob die `labels` der Funktion `factor()` richtig auf `vote` zugeordnet worden sind.
+  
+Information zur Erstellung der Variable `year`: Die erste Session hat im Jahr 1946 stattgefunden, die zweite Sessetion im Jahr 1947 und so weiter.
+
+Information zur Erstellung der Variable `country`: Die Ländercodes `ccode` können mit dem Paket `countrycode` in Ländernamen umgewandelt werden.
+
+## Zusammenfassung der Daten
+
+```{r}
+# Group by year and country
+# Find total and fraction of "yes" votes
+by_year_country <-
+  votes %>%
+  group_by(year, country) %>%
+  summarize(total = n(),
+            percent_yes = mean(vote == "Yes")) %>%
+  print()
+```
+
+# Datenvisualisierung
+
+```{r}
+# Vector of four countries to examine
+countries <- c("United States", "United Kingdom", "Germany", "Portugal")
+
+# Filter by_year_country: filtered_4_countries
+filtered_4_countries <-
+  by_year_country %>%
+  filter(country %in% countries)
+
+# Scatterplot of % yes
+# Countries as facets
+# Country specific linear regression lines minimizing the sum of squared residuals
+ggplot(data = filtered_4_countries, 
+       mapping = aes(x = year, y = percent_yes)) +
+  geom_point() +
+  facet_wrap(~country) +
+  geom_smooth(method = "lm", 
+              se = FALSE)
+```
+
+# Lineare Regression
+
+## Beispiel USA
+
+```{r}
+# Percentage of yes votes from the US by year
+US_by_year <- 
+  by_year_country %>%
+  filter(country == "United States") %>% 
+  print()
+```
+
+```{r}
+# Perform a linear regression of percent_yes by year
+# help(lm)
+US_fit <- lm(formula = percent_yes ~ year, 
+             data = US_by_year)
+
+# Perform summary() on the US_fit object
+summary(US_fit)
+```
+
+```{r}
+# Find the intercept of the linear regression
+intercept = US_fit$coef[1]
+
+# Find the slope of the linear regression
+slope = US_fit$coef[2]
+
+# Replicate the summary of the residuals shown in the regression summary
+US_by_year %>% 
+  mutate(prediction = intercept + slope * year,
+         residual = percent_yes - prediction) %>%
+  ungroup() %>%
+  select(residual) %>% 
+         summary()
+```
+
+```{r}
+# Show scatterplot with regression line and 95% confidence level interval
+ggplot(data = US_by_year,
+       mapping = aes(x = year, y = percent_yes)) +
+  geom_point() +
+  geom_smooth(method = "lm",
+              se = TRUE) +
+  ggtitle("United States")
+```
+
+## Finde die länderspezifischen Trends (steigend, fallend, nicht vorhanden)
+
+### Berechnung der Steigungen der länderspezifischen Regressionsgeraden
+
+```{r}
+# Nest all columns besides country --> column data
+# Perform a linear regression on each item in the data column  --> column model
+# Apply tidy() to each model --> column tidied
+# Unnest the tidied column --> columns term:p.value
+country_coefficients <- 
+  by_year_country %>%
+  nest(-country) %>%
+  mutate(model = map(data, ~ lm(formula = percent_yes ~ year, 
+                                data = .)),
+         tidied = map(model, tidy)) %>%
+         unnest(tidied) %>% 
+  print()
+```
+
+### Multiples Testen und Bestimmung von signifikanten Trends 
+
+```{r}
+# Filter by adjusted p-values
+filtered_countries <- country_coefficients %>%
+  filter(term == "year") %>%
+  mutate(p.adjusted = p.adjust(p.value)) %>%
+  filter(p.adjusted < .05)
+
+# Sort for the countries decreasing most quickly
+filtered_countries %>%
+  arrange(estimate)
+```
+
+```{r message=FALSE, warning=FALSE}
+# Plot countries with significant negative and positive trends
+ggplot(data = filtered_countries,
+       mapping = aes(x = estimate, 
+                     y = reorder(country, -estimate))) +
+  geom_point() +
+  geom_line() +
+  geom_vline(xintercept = 0) +
+  theme(axis.text.y = element_text(angle = 0, 
+                                   vjust = 0, 
+                                   hjust = 0, 
+                                   size = rel(0.6)),
+        axis.ticks = element_blank()) +
+  labs(y = NULL)
+  
+```

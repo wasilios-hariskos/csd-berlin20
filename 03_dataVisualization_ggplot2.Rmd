@@ -1,7 +1,7 @@
 ---
 title: "Data visualization with ggplot2"
-author: "Wasilios Hariskos"
-date: "23 December 2020"
+author: "Dr. Wasilios Hariskos"
+date: "23. Oktober 2020"
 output: slidy_presentation
 ---
 
@@ -152,6 +152,7 @@ ggplot(data = by_continent_year) +
                           color = continent))
 ```
 
+
 ## Line plot showing the change in meanGdpPercap over time
 
 ```{r echo=TRUE}
@@ -233,6 +234,27 @@ The boxplot visualizes all "outlying" points individually and five summary stati
 + lower (upper) vertical line called whisker: extends from the hinge to the smallest (largest) value no further than $1.5 \cdot IQR$,
 
 where $IQR$ is the inter-quartile range or the distance between the 1st and 3rd quartiles. See `?geom_boxplot` for more information. 
+
+## Vertiefung
+
+```{r}
+library(skimr)
+skim(gapminder_1997)
+```
+
+## Erklärung des Boxplots auf Deutsch
+
+|Kennwert |	Beschreibung | Lage im Box-Plot |
+|---------|--------------|------------------|
+|Minimum | Kleinster Wert = `p0` |	Ende des unteren Whiskers oder der südlichste Ausreißer |
+|Unteres Quartil |	25 % der Datenwerte sind kleiner oder gleich `p25` |	Beginn der Box bei `p25`|
+|Median |	50 % der Datenwerte sind kleiner oder gleich `p50` | Fetter Strich innerhalb der Box |
+|Oberes Quartil |	75 % der Datenwerte sind kleiner oder gleich `p75` | Ende der Box |
+|Maximum | Größter Wert = `p100` |	Ende des oberen Whiskers oder der nördlichste Ausreißer |
+|Spannweite| Gesamter Wertebereich des Datensatzes `p100 - p0`	| Länge des gesamten Box-Plots (inklusive Ausreißer) |
+|Interquartilsabstand |	Wertebereich, in dem sich die mittleren 50 % der Daten befinden `p75 - p25`| Ausdehnung der Box|
+
+
 
 ## The distribution of gdpPercap by continent
 

@@ -1,3 +1,7 @@
+
+
+
+
 # Percentage of yes votes from the US by year: US_by_year
 US_by_year <- by_year_country %>%
   filter(country == "United States")

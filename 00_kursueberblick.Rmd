@@ -73,6 +73,11 @@ knitr::include_graphics("diagrams/data-science-program.png")
 #
 
 ```{r}
+noten_vektor <- c(2, 3, 4, 1)
+print(noten_vektor)
+```
+
+```{r}
 namen_vektor <- c("Anton", "Anton", "Berta", "Berta")
 print(namen_vektor)
 
@@ -84,10 +89,6 @@ print(klausuren_faktor)
 ```
 
 
-```{r}
-noten_vektor <- c(2, 3, 4, 1)
-print(noten_vektor)
-```
 #
 
 ```{r}
